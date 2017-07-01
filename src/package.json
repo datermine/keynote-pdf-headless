@@ -1,0 +1,28 @@
+{
+  "name": "keynote-pdf-headless",
+  "description": "Can't believe this is necessary",
+  "repository": "",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "George",
+    "email": "george@presentio.us"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "dependencies": {
+    "bluebird": "~3.4.7",
+    "chrome-launcher": "^0.2.1",
+    "chrome-remote-interface": "^0.23.3",
+    "install": "^0.10.1",
+    "npm": "^5.0.4",
+    "sprintf-js": "0.0.7"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "chrome headless",
+    "keynote"
+  ]
+}
