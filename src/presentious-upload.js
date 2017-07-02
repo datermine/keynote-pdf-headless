@@ -13,14 +13,14 @@ const DEBUG_NETWORK = false;
 const SIZE_DESKTOP = '1280,800';
 const SIZE_MOBILE = '412,732';
 const START_URL = 'https://presentio.us/login';
-const ICLOUD_USERNAME = process.argv[2];
-const ICLOUD_PASS = process.argv[3];
+const PRESENTIOUS_USERNAME = process.argv[2];
+const PRESENTIOUS_PASS = process.argv[3];
 const FILE_TO_UPLOAD_PATH = process.argv[4];
 
 //// CRUX OF THE FLOW
 
 function doEverything() {
-  console.log(`About to log into iCloud: ${ICLOUD_USERNAME} // ${ICLOUD_PASS}`);
+  console.log(`About to log into Presentious: ${PRESENTIOUS_USERNAME} // ${PRESENTIOUS_PASS}`);
 
   let env;
   launchChrome()
@@ -40,8 +40,8 @@ function doEverything() {
 
       await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.1.png');
       await HeadlessUtil.populateForm(env.Runtime, 'form', [
-        {name: 'email', type: 'text', value: ICLOUD_USERNAME},
-        {name: 'password', type: 'text', value: ICLOUD_PASS},
+        {name: 'email', type: 'text', value: PRESENTIOUS_USERNAME},
+        {name: 'password', type: 'text', value: PRESENTIOUS_PASS},
       ]);
       await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.2.png');
       
