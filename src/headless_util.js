@@ -1,5 +1,42 @@
 const FileUtil = require('./file_util');
 
+const sleep = async (ms) => {
+  return new Promise(resolve=>{
+    setTimeout(resolve, ms);
+  });
+};
+exports.sleep = sleep;
+
+const waitForElement = async (Runtime, selector, debug=false) => {
+  // browser code to register and parse mutations
+  const browserCode = (selector) => {
+      return new Promise((fulfill, reject) => {
+          new MutationObserver((mutations, observer) => {
+              // add all the new nodes
+              const nodes = [];
+              mutations.forEach((mutation) => {
+                  nodes.push(...mutation.addedNodes);
+              });
+              // fulfills if at least one node matches the selector
+              if (nodes.find((node) => node.matches(selector))) {
+                  observer.disconnect();
+                  fulfill();
+              }
+          }).observe(document.body, {
+              childList: true
+          });
+      });
+  };
+
+  const expression = `(${browserCode})(${JSON.stringify(selector)})`;
+  debug
+      && console.log('Waiting for element: ', expression);
+  await Runtime.evaluate({
+      expression,
+      awaitPromise: true
+  });
+};
+exports.waitForElement = waitForElement;
 
 const getPageTitle = async (Runtime) => {
   const expression = "document.querySelector('title').textContent";
@@ -30,13 +67,15 @@ const clickElement = async (Runtime, selector, debug=false) => {
 };
 exports.clickElement = clickElement;
 
-const populateForm = async (Runtime, formSelector, elements) => {
+const populateForm = async (Runtime, formSelector, elements, debug=false) => {
   const elementPromises = elements.map(element => {
     // Assumes an ID is set.
     const selector = `${formSelector} #${element.name}`;
 
     if (element.type === 'text') {
       let expression = `document.querySelector("${selector}").value = '${element.value}'`;
+      debug
+          && console.log('Pop: ', expression);
       return Runtime.evaluate({expression})
     }
 
@@ -47,7 +86,7 @@ const populateForm = async (Runtime, formSelector, elements) => {
 exports.populateForm = populateForm;
 
 exports.addFiles = async ({DOM, Runtime, Page}, fileSelector, files) => {
-  const {root} =  await DOM.getDocument();
+  const {root} =  await DOM.getDocument(true);
   const {nodeId: myFileId} = await DOM.querySelector({
       nodeId: root.nodeId,
       selector: fileSelector

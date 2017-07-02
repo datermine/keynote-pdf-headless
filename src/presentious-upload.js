@@ -57,9 +57,6 @@ function doEverything() {
       await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.5.png');
       await env.Page.loadEventFired();
       await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.6.png');
-
-      // TODO(gmike): Nav to presentation
-      // TODO(gmike): Export as PDF
     })
     .then(() => {
       console.log('Done crawling. Process.Kill()ing.');

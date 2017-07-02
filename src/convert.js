@@ -9,6 +9,7 @@ const execFile = require('child_process').execFile;
 
 // GLOBALS
 
+const HEADLESS = false;
 const DEBUG_NETWORK = false;
 const SIZE_DESKTOP = '1280,800';
 const SIZE_MOBILE = '412,732';
@@ -23,7 +24,7 @@ function doEverything() {
   console.log(`About to log into iCloud: ${ICLOUD_USERNAME} // ${ICLOUD_PASS}`);
 
   let env;
-  launchChrome()
+  launchChrome(HEADLESS)
     .then(async chromeInstance => {
       env = await initializeEnvironment(chromeInstance);
 
@@ -38,13 +39,24 @@ function doEverything() {
       env.Page.navigate({url: START_URL});
       await env.Page.loadEventFired();
 
+      await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.0.png');
+
+      // TODO(gmike): Should wait, but we sleep.
+      // await HeadlessUtil.waitForElement(env.Runtime, 'iframe#auth-frame');
+      // await HeadlessUtil.waitForElement(env.Runtime, 'div#signin');
+      await await HeadlessUtil.sleep(3 * 1000);
       await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.1.png');
-      await HeadlessUtil.populateForm(env.Runtime, 'form', [
-        {name: 'email', type: 'text', value: ICLOUD_USERNAME},
-        {name: 'password', type: 'text', value: ICLOUD_PASS},
+
+      await HeadlessUtil.populateForm(env.Runtime, 'iframe#auth-frame div#signin', [
+        {name: 'appleId', type: 'text', value: ICLOUD_USERNAME},
+        {name: 'pwd', type: 'text', value: ICLOUD_PASS},
       ]);
       await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.2.png');
-      
+
+      env.Page.navigate({url: 'https://www.icloud.com/#keynote'});
+      await env.Page.loadEventFired();
+
+      /*
       await HeadlessUtil.clickElement(env.Runtime, '#login .btn');
       await env.Page.loadEventFired();
 
@@ -58,8 +70,7 @@ function doEverything() {
       await env.Page.loadEventFired();
       await HeadlessUtil.captureScreenshot(env.Runtime, env.Page, 'ss.6.png');
 
-      // TODO(gmike): Nav to presentation
-      // TODO(gmike): Export as PDF
+      */
     })
     .then(() => {
       console.log('Done crawling. Process.Kill()ing.');
