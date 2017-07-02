@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"na",
+				"navigate"
+			],
+			[
+				"exp",
+				"exports"
+			],
+			[
+				"ICO",
+				"ICLOUD_PASS"
+			],
+			[
+				"ICL",
+				"ICLOUD_USERNAME"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"ex",
+				"expression"
+			],
+			[
+				"chr",
+				"chromeInstance"
+			],
+			[
+				"pro",
+				"protocol"
+			],
+			[
 				"poll",
 				"pollsC"
 			],
@@ -100,10 +132,6 @@
 				"SupportTicketType"
 			],
 			[
-				"ex",
-				"exports"
-			],
-			[
 				"pa",
 				"payeeEmail"
 			],
@@ -152,10 +180,6 @@
 				"updateAndReload"
 			],
 			[
-				"res",
-				"response"
-			],
-			[
 				"file",
 				"filename"
 			],
@@ -182,10 +206,6 @@
 			[
 				"out",
 				"outputDir"
-			],
-			[
-				"pro",
-				"prototype"
 			],
 			[
 				"Tra",
@@ -494,40 +514,11 @@
 			[
 				"send",
 				"sendResponseVerificationWithButtons"
-			],
-			[
-				"D",
-				"DO_NOTHING"
-			],
-			[
-				"ac",
-				"action"
-			],
-			[
-				"fulf",
-				"fulfill"
-			],
-			[
-				"oper",
-				"operateOnResponses"
-			],
-			[
-				"operat",
-				"operateOnResponses"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "src/convert.js",
-			"settings":
-			{
-				"buffer_size": 217,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -594,6 +585,11 @@
 	],
 	"file_history":
 	[
+		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/convert.js",
+		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/headless_util.js",
+		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/presentious-upload.js",
+		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/file_util.js",
+		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/package.json",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/asset_controller.js",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/public/js/SettingPanel.js",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/views/body.schmidt.videos.critique.ejs",
@@ -716,16 +712,11 @@
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/views/component.pm.playercontrols.ejs",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/data_util.js",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/schmidt_tail.js",
-		"/Users/gmike/Projects/hoffman/slide-server/admin/up.sh",
-		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/video_promisers.js",
-		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/videos.js",
-		"/Users/gmike/Projects/hoffman/slide-server/src/server2/cors.googlestorage.json",
-		"/Users/gmike/Projects/hoffman/slide-server/src/server2/sync-elastic-to-mongo.js",
-		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/views/component.pm.savetodrive.ejs"
+		"/Users/gmike/Projects/hoffman/slide-server/admin/up.sh"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -765,9 +756,33 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"console.",
+			"getDocu",
+			"waitForElement",
+			"populateForm",
+			"launchChrome",
+			"waitForElement",
+			"CHROME",
+			"cloud",
+			"ICLOUD_",
+			"add",
+			"captureScreenshot",
+			"START_URL",
+			"getPag",
+			"getP",
+			"captureS",
+			"chrome",
+			"populateForm",
+			"HeadlessUtil",
+			"fs",
+			"protocol",
+			"*/\n",
+			"execF",
+			"/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
+			"ex",
 			"KEY",
 			"handleSettingsValueChange_",
 			"render",
@@ -871,31 +886,7 @@
 			"Warn",
 			"Warning",
 			"Warning:",
-			"This handle has already been taken.",
-			"getGroupByHandle",
-			"groups",
-			"requiresAdmin",
-			"group",
-			"render",
-			"addUserToGroup",
-			"HANDLE",
-			"handle",
-			"creator",
-			"addUserToGroup",
-			"GroupMembership",
-			"req",
-			"btn-re",
-			"apiRequestRe",
-			"groups",
-			"Ent",
-			"addUserToGroup",
-			"getUserById",
-			"getUSer",
-			"recording.creator",
-			"preferences",
-			"recording,",
-			"progress",
-			"data-att"
+			"This handle has already been taken."
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -903,6 +894,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"PRESENTIOUS_",
 			"#poll-creator",
 			"westAxis",
 			"PollPlaneEditor",
@@ -1029,8 +1021,7 @@
 			"AudioUploader",
 			"RecordingProducer",
 			" {",
-			"}",
-			"{"
+			"}"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1041,37 +1032,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/convert.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 217,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1118,7 +1080,7 @@
 	"project": "key2.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1127,6 +1089,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"headle",
+				"src/headless_util.js"
+			],
+			[
+				"presen",
+				"src/presentious-upload.js"
+			],
+			[
+				"prese",
+				"src/presentious-upload.js"
+			],
+			[
+				"head",
+				"src/headless_util.js"
+			],
+			[
+				"file_",
+				"src/file_util.js"
+			],
+			[
+				"pack",
+				"src/package.json"
+			],
+			[
+				"",
+				"src/package.json"
+			],
 			[
 				"asset_",
 				"app/controllers/asset_controller.js"
@@ -1310,10 +1300,6 @@
 			[
 				"polls.",
 				"app/views/polls.createform.ejs"
-			],
-			[
-				"presen",
-				"server2/app/models/presentation_association.js"
 			],
 			[
 				"pr",
@@ -1614,30 +1600,6 @@
 			[
 				"def_",
 				"app/controllers/def_admin_reports.js"
-			],
-			[
-				"userfe",
-				"server2/public/js/models/UserFeature.js"
-			],
-			[
-				"supportticket",
-				"app/models/support_ticket.js"
-			],
-			[
-				"invo",
-				"server2/app/models/invoice.js"
-			],
-			[
-				"billing_p",
-				"app/controllers/billing_promisers.js"
-			],
-			[
-				"invoice",
-				"app/models/invoice.js"
-			],
-			[
-				"body.si",
-				"app/views/body.signup.auto.ejs"
 			]
 		],
 		"width": 0.0
