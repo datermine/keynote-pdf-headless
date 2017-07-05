@@ -586,10 +586,11 @@
 	"file_history":
 	[
 		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/convert.js",
+		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/package.json",
+		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/node_modules/npm/doc/files/package-lock.json.md",
 		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/headless_util.js",
 		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/presentious-upload.js",
 		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/file_util.js",
-		"/Users/gmike/Projects/hoffman/keynote-pdf-headless/src/package.json",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/asset_controller.js",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/public/js/SettingPanel.js",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/views/body.schmidt.videos.critique.ejs",
@@ -711,8 +712,7 @@
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/views/body.schmidt.recordingembed.ejs",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/views/component.pm.playercontrols.ejs",
 		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/data_util.js",
-		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/schmidt_tail.js",
-		"/Users/gmike/Projects/hoffman/slide-server/admin/up.sh"
+		"/Users/gmike/Projects/hoffman/slide-server/src/server2/app/controllers/schmidt_tail.js"
 	],
 	"find":
 	{
@@ -759,6 +759,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"slice",
 			"console.",
 			"getDocu",
 			"waitForElement",
@@ -885,8 +886,7 @@
 			"alert alert-danger",
 			"Warn",
 			"Warning",
-			"Warning:",
-			"This handle has already been taken."
+			"Warning:"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1090,6 +1090,22 @@
 		"selected_items":
 		[
 			[
+				"conve",
+				"src/convert.js"
+			],
+			[
+				"pack",
+				"src/package.json"
+			],
+			[
+				"pacl",
+				"src/node_modules/npm/doc/files/package-lock.json.md"
+			],
+			[
+				"conver",
+				"src/convert.js"
+			],
+			[
 				"headle",
 				"src/headless_util.js"
 			],
@@ -1108,10 +1124,6 @@
 			[
 				"file_",
 				"src/file_util.js"
-			],
-			[
-				"pack",
-				"src/package.json"
 			],
 			[
 				"",
@@ -1588,18 +1600,6 @@
 			[
 				"body.schmidt.reco",
 				"app/views/body.schmidt.recordingoverview.ejs"
-			],
-			[
-				"presentationp",
-				"server2/public/js/models/PresentationProvider.js"
-			],
-			[
-				"schmid_pro",
-				"app/controllers/schmidt_promisers.js"
-			],
-			[
-				"def_",
-				"app/controllers/def_admin_reports.js"
 			]
 		],
 		"width": 0.0
